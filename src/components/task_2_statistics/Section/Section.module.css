@@ -1,0 +1,26 @@
+.section {
+  width: 320px;
+  font-family: 'Montserrat';
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: rgb(196, 202, 208);
+  margin-bottom: 50px;
+}
+.title {
+  padding: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sectionBig {
+  width: 950px;
+  font-family: 'Montserrat';
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: rgb(196, 202, 208);
+  margin-bottom: 50px;
+}

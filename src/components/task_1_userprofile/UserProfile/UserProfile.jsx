@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import UserStatistic from './UserStatistic/UserStatistic';
+import UserStatistic from '../UserStatistic/UserStatistic';
 import s from './UserProfile.module.css';
+import StatsList from 'components/task_1_userprofile/StatsList/StatsList';
 
 const UserProfile = props => {
   const {
@@ -19,21 +20,11 @@ const UserProfile = props => {
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
       </div>
-
-      <ul className={s.stats}>
-        <li className={s.stats__item}>
-          <span className={s.label}>Followers</span>
-          <span className={s.quantity}>{followers}</span>
-        </li>
-        <li className={s.stats__item}>
-          <span className={s.label}>Views</span>
-          <span className={s.quantity}>{views}</span>
-        </li>
-        <li className={s.stats__item}>
-          <span className={s.label}>Likes</span>
-          <span className={s.quantity}>{likes}</span>
-        </li>
-      </ul>
+      <StatsList>
+        <UserStatistic followers={followers} />
+        <UserStatistic views={views} />
+        <UserStatistic likes={likes} />
+      </StatsList>
     </div>
   );
 };

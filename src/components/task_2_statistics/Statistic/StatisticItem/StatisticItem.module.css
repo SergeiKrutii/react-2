@@ -1,0 +1,19 @@
+.item {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.label {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.percentage {
+  color: white;
+  font-weight: 600;
+}

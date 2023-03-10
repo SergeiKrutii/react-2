@@ -1,3 +1,10 @@
+.stat__list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
 .stats__item {
   display: flex;
   flex-direction: column;
@@ -19,6 +26,7 @@
 }
 .label {
   line-height: 30px;
+  text-transform: capitalize;
 }
 .quantity {
   font-weight: 700;

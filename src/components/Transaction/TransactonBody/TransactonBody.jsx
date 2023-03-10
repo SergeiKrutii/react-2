@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TransactonBody = ({ elem }) => {
-  const { type, amount, currency } = elem;
+const TransactonBody = ({ elem: { type, amount, currency } }) => {
   return (
     <tbody>
       <tr>
@@ -15,7 +14,11 @@ const TransactonBody = ({ elem }) => {
 };
 
 TransactonBody.propTypes = {
-  elem: PropTypes.object.isRequired,
+  elem: PropTypes.shape({
+    type: PropTypes.string,
+    amount: PropTypes.string,
+    currency: PropTypes.string,
+  }).isRequired,
 };
 
 export default TransactonBody;

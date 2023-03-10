@@ -1,17 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import UserStatistic from '../UserStatistic/UserStatistic';
 import s from './UserProfile.module.css';
-import StatsList from 'components/task_1_userprofile/StatsList/StatsList';
+import Stats from './Stats/Stats';
 
-const UserProfile = props => {
-  const {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  } = props;
+const UserProfile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className={s.profile}>
       <div className={s.description}>
@@ -20,11 +12,7 @@ const UserProfile = props => {
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
       </div>
-      <StatsList>
-        <UserStatistic followers={followers} />
-        <UserStatistic views={views} />
-        <UserStatistic likes={likes} />
-      </StatsList>
+      <Stats stats={stats} />
     </div>
   );
 };
@@ -34,9 +22,11 @@ UserProfile.propTypes = {
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  stats: PropTypes.shape({
+    folowers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }).isRequired,
 };
 
 export default UserProfile;
